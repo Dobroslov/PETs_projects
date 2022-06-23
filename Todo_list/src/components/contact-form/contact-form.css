@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.btn {
+  margin-top: 1rem;
+}
