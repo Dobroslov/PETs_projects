@@ -36,14 +36,19 @@ export default class App extends Component {
   };
 
   onSaveContact = (contact) => {
-    console.log('saveContact', {contactsData: {...this.state.contactsData, contact}});
-    this.setState({contactsData: [...this.state.contactsData, contact
-  ]})
+    console.log('saveContact', {
+      contactsData: { ...this.state.contactsData, contact },
+    });
+    this.setState({ contactsData: [...this.state.contactsData, contact] });
   };
 
   handleToggleClickForm = () => {
     console.log('handleToggleClickForm');
   };
+
+  createContact = () => {};
+
+  changeContact = () => {};
 
   render() {
     return (
@@ -52,30 +57,13 @@ export default class App extends Component {
           <ContactList contacts={this.state.contactsData} />
         </div>
         <div className='form-contact'>
-          <ContactForm onSaveContact={this.onSaveContact}
-          onDeleteContact={this.onDeleteContact} />
+          <ContactForm
+            onSaveContact={this.onSaveContact}
+            onDeleteContact={this.onDeleteContact}
+            onChangeContact={this.changeContact}
+          />
         </div>
       </div>
     );
   }
 }
-
-// Книга контактов v2
-
-// Интерфейс состоит из двух колонок:
-
-// В левой отображаем список пользователей (имя, фамилия)
-
-// Под списком отображается кнопка "Добавить пользователя"
-
-// В правой форма добавления пользователя
-
-// При клике на любого пользователя в списке, форма заполняется его данными. При клике на "Добавить пользователя" (которая находится под списком), форма заполняется пустыми значениями.
-
-// Если форма отрыта для существующего пользователя из списка, можно что-то отредактировать в форме и нажать "Сохранить", в этом случае информация в списке должна обновится. Так в этом случае доступна кнопка "Удалить", которая удаляет выбранный контакт
-
-// Работа с сервером
-// https://jsonplaceholder.typicode.com/users
-
-// Альтернатива
-// https://www.mockapi.io/

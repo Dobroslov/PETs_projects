@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 import './contact-list-item.css';
 
-export default class ContactListItem extends Component { 
-
+export default class ContactListItem extends Component {
   onContactClick = (e) => {
     console.log('onContactClick', e);
   };
@@ -12,9 +11,14 @@ export default class ContactListItem extends Component {
     const { contact } = this.props;
     // console.log(contact);
     return (
-      <li className='list-group-item' onClick={this.onContactClick}>
-        {`${contact.name} ${contact.surname}`}
-      </li>
+      <div className='contact-card'>
+        <div className='card-content'>
+          
+        </div>
+        <li className='list-group-item' onClick={this.onContactClick}>
+          {`${contact.name} ${contact.surname}`}
+        </li>
+      </div>
     );
   }
 }

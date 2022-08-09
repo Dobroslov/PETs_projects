@@ -1,0 +1,19 @@
+.contact-card {
+  margin-bottom: 10px;
+}
+
+.media {
+  align-items: center;
+  display: flex;
+  text-align: left;
+}
+
+/* .img {
+  height: 48px;
+  width: 48px;
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  max-width: 100%;
+} */
+
