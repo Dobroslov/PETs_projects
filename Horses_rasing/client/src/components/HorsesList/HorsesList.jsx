@@ -1,21 +1,15 @@
 import React from 'react';
 import './HorsesList.css';
-import './HorsesList.css'
+import './HorsesList.css';
 
-const HorsesList = () => {
+const HorsesList = ({ horseData }) => {
   return (
     <div>
       <ul className='horses-list'>
-      <li>Cricket</li>
-      <li>Rebel</li>
-      <li>Rebel</li>
-      <li>Lucy</li>
-      <li>Lucy</li>
-      <li>Lucy</li>
-      <li>Lucy</li>
-      <li>Lucy</li>
+        {horseData.map(({name, distance}) => {
+          return <li key={name}><span>{name}</span> {distance} </li>;
+        })}
       </ul>
-     
     </div>
   );
 };

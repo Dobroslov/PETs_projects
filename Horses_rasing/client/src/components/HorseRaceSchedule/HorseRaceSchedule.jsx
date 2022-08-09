@@ -5,12 +5,13 @@ import HorsesList from '../HorsesList';
 
 import './HorseRaceSchedule.css'
 
-const HorseRaceSchedule = () => {
+const HorseRaceSchedule = ({horseData}) => {
   return (
     <div>
+      <HorsesList horseData={horseData}/>
       <div className='top-row'>
-        <HorsesList />
-        <DistanceBar />
+        
+        <DistanceBar horseData={horseData.distance} />
       </div>
 
       <DistanceScale />

@@ -1,19 +1,17 @@
 import React from 'react';
-import './DistanceBar.css'
+import './DistanceBar.css';
+import { Bar } from 'react-chartjs-2';
+
+
 
 const DistanceBar = () => {
+  
+  
   return (
-    <ul className='distance-bar'>
-      <li className='distance-line'>DistanceBar</li>
-      <li className='distance-line'>DistanceBar</li>
-      <li className='distance-line'>DistanceBar</li>
-      <li className='distance-line'>DistanceBar</li>
-      <li className='distance-line'>DistanceBar</li>
-      <li className='distance-line'>DistanceBar</li>
-      <li className='distance-line'>DistanceBar</li>
-      <li className='distance-line'>DistanceBar</li>
-    </ul>
+    <div className='distance-bar'>
+      <Bar />
+    </div>
   );
 };
 
-export default DistanceBar
+export default DistanceBar;
