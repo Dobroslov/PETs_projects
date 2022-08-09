@@ -1,0 +1,17 @@
+.distance-bar {
+  display: flex;
+  flex-direction:column;
+  text-align: left;
+  font-size: 20px;
+  display: flex;
+  flex-grow: 1;
+  border: 2px solid #81c784;
+  justify-content: space-between;  
+  align-items: left;
+}
+
+.distance-line {
+  background-color: #519657;
+  text-align: left;
+  font-size: 20px;
+}

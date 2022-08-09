@@ -1,4 +1,5 @@
 import AppHeader from '../AppHeader';
+import HorseRaceSchedule from '../HorseRaceSchedule';
 import './app.css';
 
 // import GotServices from '../gotServices';
@@ -8,7 +9,9 @@ const App = () => {
     <div className='app'>
       {/* <GotServices/> */}
       <AppHeader />
-      Будь счастлива Земля!
+      
+      
+      <HorseRaceSchedule/>
     </div>
   );
 };
