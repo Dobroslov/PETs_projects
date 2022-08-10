@@ -26,7 +26,7 @@ const DistanceBar = ({ horses, distances }) => {
     labels: horses,
     datasets: [
       {
-        label: horses[0],
+        label: 'Пройденное расстояние',
         data: distances,
         borderColor: '#81c784',
         backgroundColor: '#519657',

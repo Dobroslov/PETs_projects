@@ -1,28 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DistanceBar from '../DistanceBar';
-import { io } from "socket.io-client";
-
+import DataProvider from '../../Services/DataProvider';
 import './HorseRaceSchedule.css';
 
-const HorseRaceSchedule = ({ horseData }) => {
-  let url = 'ws://localhost:3002/';
-  const socket = io(url);
-  console.log("🚀 ~ file: HorseRaceSchedule.jsx ~ line 12 ~ HorseRaceSchedule ~ socket", socket)
+class HorseRaceSchedule extends Component {
+  constructor() {
+    super()
+    this.horseData = [];
+    this.DataProvider = new DataProvider()
+    this.DataProvider.start(this.handlerData.bind(this))
+    // console.log(this.DataProvider)
+  }
 
-  socket.on('start', () => {
-    console.log('start');
-    
-  });
-
-  // console.log(horseData);
-  let horses = horseData.map((horse) => horse.name);
-  let distances = horseData.map((horse) => horse.distance);
-
-  return (
-    <div>
-      <DistanceBar horses={horses} distances={distances} />
-    </div>
-  );
-};
+  handlerData = (res) => {
+    console.log(res);
+    this.horseData = res
+    this.render()
+  };
+  
+  render() {
+    let horses = this.horseData.map((horse) => horse.name);
+    console.log('horses', horses);
+    let distances = this.horseData.map((horse) => horse.distance);
+    return (
+      <div>
+        <DistanceBar horses={horses} distances={distances} />
+      </div>
+    );
+  }
+}
 
 export default HorseRaceSchedule;
