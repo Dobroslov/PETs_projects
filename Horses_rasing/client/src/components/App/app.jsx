@@ -9,27 +9,27 @@ const App = () => {
 const horseData = [
   {
     name: 'Princess Diana',
-    distance: 0
+    distance: 50
   },
   {
     name: 'Cricket',
-    distance: 0
+    distance: 40
   },
   {
     name: 'Rebel',
-    distance: 0
+    distance: 500
   },
   {
     name: 'Lucy',
-    distance: 0
+    distance: 200
   },
   {
     name: 'Lacey',
-    distance: 0
+    distance: 10
   },
   {
     name: 'Ginger',
-    distance: 0
+    distance: 15
   },
 ];
 
