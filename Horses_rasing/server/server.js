@@ -4,7 +4,7 @@ const http = require('http');
 const io = require('socket.io');
 const cors = require('cors');
 
-const INTERVAL = 3000;
+const INTERVAL = 1000;
 const PORT = 3002;
 
 const horses = [

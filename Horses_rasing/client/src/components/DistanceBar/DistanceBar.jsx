@@ -21,7 +21,6 @@ ChartJS.register(
 );
 
 const DistanceBar = ({ horses, distances }) => {
-  // console.log('Hors', horses);
   const data = {
     labels: horses,
     datasets: [

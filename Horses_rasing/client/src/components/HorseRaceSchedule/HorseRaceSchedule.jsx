@@ -1,33 +1,35 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import DistanceBar from '../DistanceBar';
 import DataProvider from '../../Services/DataProvider';
 import './HorseRaceSchedule.css';
 
-class HorseRaceSchedule extends Component {
-  constructor() {
-    super()
-    this.horseData = [];
-    this.DataProvider = new DataProvider()
-    this.DataProvider.start(this.handlerData.bind(this))
-    // console.log(this.DataProvider)
-  }
+const HorseRaceSchedule = () => {
+  const [horses, setHorses] = useState(null);
+  const [distances, setDistances] = useState(null);
+  const dataProvider = new DataProvider();
 
-  handlerData = (res) => {
-    console.log(res);
-    this.horseData = res
-    this.render()
+  const handlerData = (res) => {
+    let horses1 = res.map((horse) => horse.name);
+    let distances1 = res.map((horse) => horse.distance);
+    
+    setHorses(horses1)
+    setDistances(distances1)
+    
   };
-  
-  render() {
-    let horses = this.horseData.map((horse) => horse.name);
-    console.log('horses', horses);
-    let distances = this.horseData.map((horse) => horse.distance);
-    return (
-      <div>
-        <DistanceBar horses={horses} distances={distances} />
-      </div>
-    );
-  }
-}
+
+  useEffect(() => {
+    console.log('useEffect()');
+    dataProvider.start(handlerData);
+    return () => {
+      dataProvider.finish()
+    }
+  }, []);
+
+  return (
+    <div>
+      <DistanceBar horses={horses} distances={distances} />
+    </div>
+  );
+};
 
 export default HorseRaceSchedule;
