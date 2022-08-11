@@ -15,7 +15,6 @@ export default class DataProvider {
   }
 
   finish() {
-    this.socket.emit('disconnect');
-    this.socket.emit('disconnect');
+    this.socket.off('disconnect');
   }
 }
