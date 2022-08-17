@@ -33,6 +33,7 @@
   --font-normal: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
+
   /* ======== Magenes Bottom ======== */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
@@ -49,6 +50,7 @@
   --z-modal: 1000;
   /* ========  ======== */
 }
+
 /* Responsive typography */
 @media screen and (max-width: 992px) {
   :root {
@@ -61,13 +63,14 @@
     --smaller-font-size: 0.75rem;
   }
 }
-/* ======== BASE ======== */
 
+/* ======== BASE ======== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -110,6 +113,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 /* ======== REUSABLE CSS CLASSES ======== */
 .section {
   padding: 6rem 0 2rem;
