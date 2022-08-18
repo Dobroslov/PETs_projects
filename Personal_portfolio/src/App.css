@@ -148,7 +148,7 @@ img {
 }
 
 /* ======== BUTTONS ======== */
-.buttons {
+.button {
   display: inline-block;
   background-color: var(--title-color);
   color: var(--container-color);
@@ -157,7 +157,7 @@ img {
   font-weight: var(--font-medium);
 }
 
-.buttons:hover {
+.button:hover {
   background-color: var(--title-color-dark);
 }
 
@@ -187,8 +187,10 @@ img {
 }
 
 /* For small device */
-@media screen and (max-width: 350px) {.container {
-  margin-left: var(--mb-1);
-  margin-right: var(--mb-1);
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
 }
-}
+
