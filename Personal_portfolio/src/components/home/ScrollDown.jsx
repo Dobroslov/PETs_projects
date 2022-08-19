@@ -31,6 +31,8 @@ const ScrollDown = () => {
             style={{ fill: 'none', stroke: 'var(--title-color)', strokeWidth: '20px' }}
           ></path>
         </svg>
+        <span className="home__scroll-name">Scroll Down</span>
+        <i class="uil uil-arrow-down home__scroll-arrow"></i>
       </a>
     </div>
   );
