@@ -46,7 +46,7 @@ const Services = () => {
                 }}
               ></i>
 
-              <h3 className='services__modal-title'></h3>
+              <h3 className='services__modal-title'>fasdf</h3>
               <p className='services__modal-description'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Tempora, dolores numquam iste aliquid aspernatur et cupiditate
@@ -115,7 +115,7 @@ const Services = () => {
                 }}
               ></i>
 
-              <h3 className='services__modal-title'></h3>
+              <h3 className='services__modal-title'>fadsf</h3>
               <p className='services__modal-description'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Tempora, dolores numquam iste aliquid aspernatur et cupiditate
@@ -184,7 +184,7 @@ const Services = () => {
                 }}
               ></i>
 
-              <h3 className='services__modal-title'></h3>
+              <h3 className='services__modal-title'>fasdf</h3>
               <p className='services__modal-description'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Tempora, dolores numquam iste aliquid aspernatur et cupiditate
