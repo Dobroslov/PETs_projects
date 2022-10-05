@@ -1,0 +1,55 @@
+.card {
+  width: 80px;
+  height: 104px;
+}
+
+.text-button {
+  border: 0.5px solid #cdcdcd;
+  border-radius: 8px;
+  width: 80px;
+  height: 104px;
+  cursor: pointer;
+  background-color: #fff;
+
+  &:hover {
+    border: 0.5px solid #cdcdcd;
+    transition: all 0.2s ease-in;
+    transition-delay: 150ms;
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.15));
+  }
+
+  span {
+    opacity: 0.1;
+    transition: all 0.2s ease-in;
+    transition-delay: 150ms;
+  }
+
+  &:disabled {
+    border: 0.5px solid black;
+
+    span {
+      opacity: 1;
+      color: black;
+    }
+
+    &:hover {
+      filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
+    }
+  }
+}
+
+.text-button.active {
+  border: 0.5px solid #ed5517;
+  transition: all 0.2s ease-in;
+  transition-delay: 150ms;
+
+  span {
+    opacity: 1;
+    transition: all 0.2s ease-in;
+    transition-delay: 150ms;
+  }
+
+  &:disabled {
+    border: 0.5px solid black;
+  }
+}

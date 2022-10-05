@@ -1,0 +1,20 @@
+.title__header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  color: black;
+  margin: 0 auto 70px auto;
+}
+
+.header-button {
+  border: 3px solid #cdcdcd;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: black;
+  margin: 0 auto 20px auto;
+  font-size: 2em;
+  &:hover {
+    filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.15));
+  }
+}
